@@ -11,7 +11,7 @@ print(media_path)
 
 router = APIRouter(
     prefix="/stream/video",
-    tags=["video"],
+    tags=["stream"],
     responses={404: {"description": "Not Found"}}
 )
 

@@ -65,7 +65,7 @@ class ActorCrud(Actions):
 
     def creat_actor(self, db: Session, actor: schemas.ActorCreate):
         self.query_check(db, actor.name, is_register=True, by_name=True)
-        db_actor = models.Actor(name=actor.name, image=actor.image)
+        db_actor = models.Actor(**actor.dict())
         return self.add(db, db_actor)
 
     def update_actor(self, db: Session, info: str, update_data: dict, by_name: bool = False):
