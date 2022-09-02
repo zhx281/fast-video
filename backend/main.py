@@ -9,6 +9,7 @@ models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 
+# Route to different api modules
 app.include_router(actors.router)
 app.include_router(videos.router)
 app.include_router(streamer.router)
