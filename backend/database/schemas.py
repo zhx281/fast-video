@@ -7,6 +7,7 @@ class VideoBase(BaseModel):
     title: str
     description: Union[str, None] = None
     image: Union[str, None] = None
+    path: Union[str, None] = None
 
 
 class VideoCreate(VideoBase):
@@ -26,6 +27,7 @@ class VideoUpdate(BaseModel):
     title: Optional[str] = None
     description: Optional[str] = None
     image: Optional[str] = None
+    path: Optional[str] = None
     is_active: Optional[bool] = None
 
 

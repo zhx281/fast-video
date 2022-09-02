@@ -2,6 +2,7 @@ from typing import List, Union
 from fastapi import Depends, APIRouter
 from sqlalchemy.orm import Session
 
+
 from ..database import schemas
 from ..database.crud import ActorCrud, VideoCrud
 from ..database.database import get_db

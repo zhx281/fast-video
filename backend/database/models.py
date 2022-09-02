@@ -31,7 +31,8 @@ class Video(Base):
     title = Column(String)
     description = Column(String)
     image = Column(String)
-    is_active = Column(Boolean, default=False)
+    path = Column(String)
+    is_active = Column(Boolean, default=True)
     owner_id = Column(String, ForeignKey("actors.id"))
 
     owner = relationship("Actor", back_populates="videos")
