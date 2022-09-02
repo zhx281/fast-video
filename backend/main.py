@@ -13,11 +13,10 @@ app.include_router(actors.router)
 app.include_router(videos.router)
 app.include_router(streamer.router)
 
+# Including the build file from react-app
 app.mount("/", StaticFiles(directory="./backend/template", html=True), name="react")
 
 
 @app.get("/")
 def home():
     return HTMLResponse("index.html", status_code=200)
-
-# test
