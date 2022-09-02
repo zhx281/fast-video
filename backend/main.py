@@ -19,3 +19,5 @@ app.mount("/", StaticFiles(directory="./backend/template", html=True), name="rea
 @app.get("/")
 def home():
     return HTMLResponse("index.html", status_code=200)
+
+# test
