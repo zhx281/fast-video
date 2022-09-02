@@ -14,9 +14,9 @@ class VideoCreate(VideoBase):
 
 
 class Video(VideoBase):
-    id: int
+    id: str
     is_active: bool
-    owner_id: int
+    owner_id: str
 
     class Config:
         orm_mode = True
@@ -39,7 +39,7 @@ class ActorCreate(ActorBase):
 
 
 class Actor(ActorBase):
-    id: int
+    id: str
     is_active: bool
     videos: List[Video] = []
 
