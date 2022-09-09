@@ -6,7 +6,7 @@ from ..database.crud import VideoCrud
 from ..database.database import get_db
 from ..stream.stream import range_requests_response
 
-# meida path change to you local hard drive or media server
+# Media path change to you local hard drive or media server
 media_path = os.getcwd()
 
 # Setup for fastapi router
