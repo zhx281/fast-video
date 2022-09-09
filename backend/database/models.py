@@ -1,4 +1,3 @@
-from enum import unique
 from sqlalchemy import Boolean, Column, ForeignKey, String
 from sqlalchemy.orm import relationship
 
@@ -8,6 +7,7 @@ import shortuuid
 
 
 def generate_id():
+    # Returning the str of generated short uuid
     return str(shortuuid.uuid())
 
 

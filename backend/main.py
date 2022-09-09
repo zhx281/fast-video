@@ -2,15 +2,15 @@ from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
-
+# import routers
 from .routers import actors, videos, streamer
-
+# Import database
 from .database import models
 from .database.database import engine
 models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
-
+# A list of localhost ports to be allow by cross origin
 hosts = ["http://localhost:3000", "http://localhost:8000"]
 
 # CORS in order for react to fetch from api within localhost

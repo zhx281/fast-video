@@ -5,6 +5,10 @@ from . import models, schemas
 
 
 class Actions:
+    '''
+    Base Class for most of common CRUD Actions.
+    '''
+
     def __init__(self):
         pass
 
@@ -58,6 +62,10 @@ class Actions:
 
 
 class ActorCrud(Actions):
+    '''
+    Specific CRUD actions for Actors.
+    '''
+
     def __init__(self):
         super().__init__()
         self.model = models.Actor
@@ -82,6 +90,10 @@ class ActorCrud(Actions):
 
 
 class VideoCrud(Actions):
+    '''
+    Specific CRUD Actions for Videos.
+    '''
+
     def __init__(self):
         super().__init__()
         self.model = models.Video
